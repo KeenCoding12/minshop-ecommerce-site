@@ -42,58 +42,63 @@ export default function AboutPage() {
   return (
     <>
       {/* ── Page hero ── */}
-      <section className="bg-[#1a1a1a] py-14">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <p className="text-gray-400 text-sm tracking-wide mb-2">
-            HOME /{" "}
-            <span className="text-white font-semibold uppercase">About</span>
-          </p>
-          <h1 className="text-white text-4xl font-bold">About Us</h1>
+      <section className="bg-neutral-900 py-14">
+        <div className="container">
+          {/* Title */}
+          <div className="text-center">
+            <p className="text-gray-400 text-sm tracking-wide mb-2">
+              HOME /{" "}
+              <span className="text-white font-semibold uppercase">About</span>
+            </p>
+            <h1 className="text-white text-4xl font-bold">About Us</h1>
+          </div>
+
+          {/* ── Banner image ── */}
+          <div className="max-w-3/4 w-full mx-auto h-full pt-12">
+            <Image
+              src="/images/about-banner.png"
+              alt="MinShop team"
+              width={1032}
+              height={544}
+              className="w-full h-80 object-cover"
+              priority
+            />
+          </div>
         </div>
       </section>
-
-      {/* ── Banner image ── */}
-      <section className="bg-[#1a1a1a] pb-0">
-        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-          <Image
-            src="/images/about-banner.png"
-            alt="MinShop team"
-            width={780}
-            height={440}
-            className="w-full object-cover rounded-lg"
-            priority
-          />
-        </div>
-      </section>
-
       {/* ── Headline + stats ── */}
-      <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-14 text-center">
-        <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 leading-snug mb-10">
-          Quisque Scelerisque Nisi Sodales <br />
-          Duis Nonrisus Vel Imperdiet
-        </h2>
+      <section className="py-14 text-center">
+        <div className="container">
+          <h2 className="text-2xl sm:text-3xl font-bold text-neutral-900 leading-snug mb-10">
+            Quisque Scelerisque Nisi Sodales <br />
+            Duis Nonrisus Vel Imperdiet
+          </h2>
 
-        {/* Stats */}
-        <div className="grid grid-cols-3 gap-6 mb-10">
-          {stats.map((stat) => (
-            <div key={stat.label} className="flex flex-col items-center gap-1">
-              <span className="text-4xl sm:text-5xl font-bold text-gray-900">
-                {stat.value}
-              </span>
-              <span className="text-sm text-gray-500">{stat.label}</span>
-            </div>
-          ))}
+          {/* Stats */}
+          <div className="grid grid-cols-3 gap-6 mb-10">
+            {stats.map((stat) => (
+              <div
+                key={stat.label}
+                className="flex flex-col items-center gap-1"
+              >
+                <span className="text-4xl sm:text-5xl font-bold text-neutral-900">
+                  {stat.value}
+                </span>
+                <span className="text-neutral-500">{stat.label}</span>
+              </div>
+            ))}
+          </div>
+
+          {/* Body copy */}
+          <p className="text-neutral-600 leading-relaxed mb-3">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Felis
+            donec et odio pellentesque diam volutpat.
+          </p>
+          <p className="text-sm text-neutral-600 leading-relaxed">
+            Ullamcorper malesuada proin libero nunc consequat interdum varius.
+          </p>
         </div>
-
-        {/* Body copy */}
-        <p className="text-sm text-gray-600 leading-relaxed mb-3">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Felis donec
-          et odio pellentesque diam volutpat.
-        </p>
-        <p className="text-sm text-gray-600 leading-relaxed">
-          Ullamcorper malesuada proin libero nunc consequat interdum varius.
-        </p>
       </section>
 
       {/* ── Testimonials ── */}

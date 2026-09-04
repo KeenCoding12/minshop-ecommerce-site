@@ -41,14 +41,14 @@ export default function ProductsClient({ products }: Props) {
   });
 
   return (
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
-      {/* Sort bar */}
-      <div className="flex justify-end mb-8">
-        <div className="relative">
+    <div className="py-10">
+      <div className="container">
+        {/* Sort bar */}
+        <div className="relative flex justify-end mb-8">
           <select
             value={sortOrder}
             onChange={(e) => setSortOrder(e.target.value as SortOrder)}
-            className="appearance-none border border-gray-300 text-gray-700 text-sm rounded px-4 py-2 pr-10 bg-white focus:outline-none focus:ring-2 focus:ring-blue-500 cursor-pointer"
+            className="appearance-none border border-gray-300 text-neutral-700 text-sm rounded px-4 py-2 pr-10 bg-white focus:outline-none focus:ring-2 focus:ring-sky-500 cursor-pointer"
           >
             <option value="default">Default sorting</option>
             <option value="price-asc">Price: Low to High</option>
@@ -69,48 +69,44 @@ export default function ProductsClient({ products }: Props) {
             />
           </svg>
         </div>
-      </div>
 
-      {/* Product grid */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        {sorted.map((product) => (
-          <div
-            key={product.id}
-            className="flex flex-col border border-gray-100 rounded-sm overflow-hidden bg-white"
-          >
-            {/* Image */}
-            <Link href={`/products/${product.id}`}>
-              <div className="bg-gray-100 flex items-center justify-center h-56 p-4 hover:opacity-90 transition-opacity">
-                <Image
-                  src={product.image}
-                  alt={product.name}
-                  width={180}
-                  height={180}
-                  className="object-contain h-full w-auto"
-                />
-              </div>
-            </Link>
-
-            {/* Info */}
-            <div className="p-4 flex flex-col gap-1 flex-1">
-              <Link
-                href={`/products/${product.id}`}
-                className="font-semibold text-gray-900 hover:text-blue-600 transition-colors text-sm"
-              >
-                {product.name}
+        {/* Product grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          {sorted.map((product) => (
+            <div
+              key={product.id}
+              className="flex flex-col border border-neutral-100 rounded-sm overflow-hidden bg-white"
+            >
+              {/* Image */}
+              <Link href={`/products/${product.id}`}>
+                <div className="bg-gray-100 flex items-center justify-center h-56 p-4 hover:opacity-90 transition-opacity">
+                  <Image
+                    src={product.image}
+                    alt={product.name}
+                    width={180}
+                    height={180}
+                    className="object-contain h-full w-auto"
+                  />
+                </div>
               </Link>
-              <p className="text-sm text-gray-700">
-                ${product.price.toFixed(2)}
-              </p>
-              <p className="text-sm font-bold text-gray-900">
-                {product.category}
-              </p>
-              <div className="mt-3">
-                <AddToCartButton product={product} />
+
+              {/* content */}
+              <div className="p-4 flex flex-col gap-1 flex-1">
+                <Link
+                  href={`/products/${product.id}`}
+                  className="font-bold text-neutral-900 hover:text-sky-600 transition-colors "
+                >
+                  {product.name}
+                </Link>
+                <p className="text-neutral-700">${product.price.toFixed(2)}</p>
+                <p className="font-bold text-neutral-900">{product.category}</p>
+                <div className="mt-auto">
+                  <AddToCartButton product={product} />
+                </div>
               </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     </div>
   );

@@ -1,4 +1,4 @@
-import { Product } from "./types";
+import { Product } from "@/types";
 
 export const products: Product[] = [
   {
@@ -8,7 +8,7 @@ export const products: Product[] = [
     category: "Gadgets",
     image: "/images/product-img-1.png",
     description:
-      "Lorem ipsum dolor sit amet consectetur. Nullam arcu egestas ipsum nam lacus. Augue a diam ridiculus lacus enim ultricies mattis risus tincidunt. Tellus vitae in rutrum risus duis rhoncus fermentum congue varius. Eleifend vivamus vulputate eu placerat ac.\n\nA sed turpis arcu interdum massa purus. Aliquam habitant vulputate vulputate sed neque eget urna praesent. Ut aenean dictum in est elit cursus purus amet mattis. Varius arcu malesuada amet pulvinar ipsum a. Viverra congue ipsum lectus proin blandit sit ut. Non ac est a ullamcorper congue.\n\nRhoncus volutpat vitae cursus posuere in urna metus. Elit donec erat purus facilisi est ut eget. Cras proin cras a tellus. In placerat eget vel volutpat metus pulvinar elit. Platea sit sed lacus magna amet diam pharetra nunc dolor. Nibh imperdiet purus adipiscing faucibus sit. Aenean quam imperdiet.",
+      "Lorem ipsum dolor sit amet consectetur. Nullam arcu egestas ipsum nam lacus. Augue a diam ridiculus lacus enim ultricies mattis risus tincidunt. Tellus vitae in rutrum risus duis rhoncus fermentum congue varius. Eleifend vivamus vulputate eu placerat ac.\n\nA sed turpis arcu interdum massa purus. Aliquam habitant vulputate vulputate sed neque eget urna praesent. Ut aenean dictum in est elit cursus purus amet mattis. Varius arcu malesuada amet pulvinar ipsum a. Viverra congue ipsum lectus proin blandit sit ut. Non ac est a ullamcorper congue.",
   },
   {
     id: "2",

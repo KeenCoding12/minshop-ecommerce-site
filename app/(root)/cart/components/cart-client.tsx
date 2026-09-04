@@ -11,10 +11,10 @@ export default function CartClient() {
   if (items.length === 0) {
     return (
       <div className="flex flex-col items-center justify-center py-24 gap-5">
-        <p className="text-gray-500 text-lg">Your cart is empty.</p>
+        <p className="text-neutral-500 text-lg">Your cart is empty.</p>
         <Link
           href="/products"
-          className="bg-blue-600 hover:bg-blue-700 text-white text-sm font-semibold px-6 py-3 rounded transition-colors"
+          className="bg-sky-600 hover:bg-sky-700 text-white text-sm font-bold px-6 py-3 rounded transition-colors"
         >
           Continue Shopping
         </Link>
@@ -23,17 +23,17 @@ export default function CartClient() {
   }
 
   return (
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-      <div className="flex flex-col lg:flex-row gap-8">
+    <div className="py-12">
+      <div className="flex flex-col lg:flex-row gap-8 container">
         {/* ── Left: cart table ── */}
         <div className="flex-1">
           {/* Table header */}
-          <div className="grid grid-cols-[1fr_auto_auto_auto] gap-4 items-center border-b border-gray-200 pb-3 mb-2">
-            <span className="text-sm font-semibold text-gray-700">Product</span>
-            <span className="text-sm font-semibold text-gray-700 w-28 text-center">
+          <div className="grid grid-cols-[1fr_auto_auto_auto] gap-4 items-center border-b border-neutral-100 pb-3 mb-2">
+            <span className="font-bold text-neutral-700">Product</span>
+            <span className="font-bold text-neutral-700 w-28 text-center">
               Quantity
             </span>
-            <span className="text-sm font-semibold text-gray-700 w-24 text-right">
+            <span className="font-bold text-neutral-700 w-24 text-right">
               Subtotal
             </span>
             <span className="w-8" />

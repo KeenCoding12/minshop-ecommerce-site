@@ -2,17 +2,7 @@
 
 import { create } from "zustand";
 import { persist } from "zustand/middleware";
-import { Product, CartItem } from "@/lib/types";
-
-interface CartStore {
-  items: CartItem[];
-  totalItems: number;
-  totalPrice: number;
-  addItem: (product: Product, qty: number) => void;
-  removeItem: (id: string) => void;
-  updateQty: (id: string, qty: number) => void;
-  clearCart: () => void;
-}
+import { CartStore, CartItem } from "@/types";
 
 function calcTotals(items: CartItem[]) {
   return {
@@ -30,14 +20,10 @@ export const useCartStore = create<CartStore>()(
 
       addItem: (product, qty) =>
         set((state) => {
-          const existing = state.items.find(
-            (i) => i.product.id === product.id
-          );
+          const existing = state.items.find((i) => i.product.id === product.id);
           const updated = existing
             ? state.items.map((i) =>
-                i.product.id === product.id
-                  ? { ...i, qty: i.qty + qty }
-                  : i
+                i.product.id === product.id ? { ...i, qty: i.qty + qty } : i,
               )
             : [...state.items, { product, qty }];
           return { items: updated, ...calcTotals(updated) };
@@ -55,16 +41,15 @@ export const useCartStore = create<CartStore>()(
             qty <= 0
               ? state.items.filter((i) => i.product.id !== id)
               : state.items.map((i) =>
-                  i.product.id === id ? { ...i, qty } : i
+                  i.product.id === id ? { ...i, qty } : i,
                 );
           return { items: updated, ...calcTotals(updated) };
         }),
 
-      clearCart: () =>
-        set({ items: [], totalItems: 0, totalPrice: 0 }),
+      clearCart: () => set({ items: [], totalItems: 0, totalPrice: 0 }),
     }),
     {
       name: "minshop-cart",
-    }
-  )
+    },
+  ),
 );

@@ -27,12 +27,12 @@ export default function ProductCard({ product }: Props) {
       <div className="p-4 flex flex-col gap-1 flex-1">
         <Link
           href={`/products/${product.id}`}
-          className="font-semibold text-gray-900 hover:text-blue-600 transition-colors text-sm"
+          className="font-bold text-gray-900 hover:text-blue-600 transition-colors"
         >
           {product.name}
         </Link>
-        <p className="text-sm text-gray-700">${product.price.toFixed(2)}</p>
-        <p className="text-sm font-bold text-gray-900">{product.category}</p>
+        <p className="text-gray-700">${product.price.toFixed(2)}</p>
+        <p className="font-bold text-gray-900">{product.category}</p>
         <div className="mt-3">
           <AddToCartButton product={product} />
         </div>

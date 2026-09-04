@@ -35,16 +35,16 @@ export default async function ProductDetailPage({ params }: Props) {
   return (
     <>
       {/* ── Product detail section ── */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+      <section className="py-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 container">
           {/* Left — product image */}
-          <div className="bg-gray-100 rounded-sm flex items-center justify-center p-8 min-h-[360px]">
+          <div className="bg-neutral-100 rounded-sm flex items-center justify-center p-8 min-h-90">
             <Image
               src={product.image}
               alt={product.name}
               width={340}
               height={340}
-              className="object-contain w-full max-w-xs h-auto"
+              className="object-contain w-full max-w-xs h-76"
               priority
             />
           </div>
@@ -91,17 +91,6 @@ export default async function ProductDetailPage({ params }: Props) {
             in iaculis luctus bibendum suscipit cras sit in. Bibendum urna amet
             natoque aliquam amet tincidunt enim libero enim. Viverra quis risus
             in urna volutpat. Sed odio praesent sit nibh.
-          </p>
-          <p>
-            Dignissim turpis sed scelerisque semper arcu sit morbi quisque.
-            Scelerisque mi viverra faucibus elementum ut proin. Felis ac vel
-            dapibus habitant. Arcu faucibus ut enim nunc morbi convallis. Dui
-            vitae amet id quam tempor dui quam. Semper nisl a arcu ut a
-            habitasse libero. Aenean turpis volutpat nec in morbi. A nibh nunc
-            nibh sed. Aliquam tortor mattis semper lacinia diam sed morbi eu.
-            Morbi ac leo eu montes. Faucibus porttitor faucibus feugiat felis
-            egestas malesuada pellentesque. Fames egestas dignissim tortor elit.
-            Sapien ultrices lobortis a massa.
           </p>
         </div>
       </section>

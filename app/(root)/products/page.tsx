@@ -10,9 +10,9 @@ export default function ProductsPage() {
   return (
     <>
       {/* Page hero banner */}
-      <section className="bg-[#1a1a1a] py-14">
+      <section className="bg-neutral-900 py-14">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <p className="text-gray-400 text-sm tracking-wide mb-2">
+          <p className="text-neutral-400 tracking-wide mb-2">
             HOME /{" "}
             <span className="text-white font-semibold uppercase">Products</span>
           </p>
