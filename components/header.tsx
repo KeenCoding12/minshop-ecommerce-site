@@ -27,7 +27,7 @@ export default function Header() {
 
   return (
     <header className="bg-neutral-900 sticky top-0 right-0 py-4 z-50 w-full">
-      <div className="container">
+      <div className="container relative">
         {/* Main nav row */}
         <div className="flex items-center justify-between">
           {/* Logo */}
@@ -126,7 +126,7 @@ export default function Header() {
 
         {/* Mobile nav menu */}
         {mobileOpen && (
-          <div className="md:hidden border-t border-gray-700 px-4 py-4 flex flex-col gap-4">
+          <div className="md:hidden px-4 py-4 flex flex-col gap-2 bg-neutral-800/90 backdrop-blur-2xl rounded-lg mt-5 absolute top-full max-w-md w-full right-2.5">
             {navLinks.map((link) => {
               const isActive =
                 link.href === "/"
@@ -137,10 +137,10 @@ export default function Header() {
                   key={link.href}
                   href={link.href}
                   onClick={() => setMobileOpen(false)}
-                  className={`text-sm ${
+                  className={`p-2 ${
                     isActive
-                      ? "text-white font-semibold"
-                      : "text-gray-300 hover:text-white"
+                      ? "text-white bg-neutral-700/50 block  rounded-lg font-semibold"
+                      : "text-gray-300 hover:text-white hover:bg-neutral-700/50 focus:hover:bg-neutral-700/50 rounded-lg transition-colors"
                   }`}
                 >
                   {link.label}

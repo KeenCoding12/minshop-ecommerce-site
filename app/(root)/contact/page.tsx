@@ -27,7 +27,9 @@ export default function ContactPage() {
             <div className="flex items-start gap-4 pb-5 sm:pb-0 sm:pr-6">
               <MapPinIcon className="size-6 text-neutral-500 shrink-0 mt-0.5" />
               <div>
-                <p className="text-neutral-400">Location</p>
+                <p className="font-bold text-neutral-900 mb-1">Location</p>
+                <p className="text-neutral-600">123 Queen Street West</p>
+                <p className="text-neutral-600">Toronto, Ontario, Canada</p>
               </div>
             </div>
 
@@ -58,7 +60,7 @@ export default function ContactPage() {
         </div>
       </section>
 
-      {/* ── Contact form (client component) ── */}
+      {/* ── Contact form ── */}
       <ContactForm />
     </>
   );

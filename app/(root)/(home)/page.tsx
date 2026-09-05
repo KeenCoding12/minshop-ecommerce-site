@@ -24,6 +24,7 @@ export default function HomePage() {
     <>
       {/* Hero  */}
       <section className="bg-neutral-900 pt-18 lg:pt-28 relative">
+        {/* Wrapper */}
         <div className="container grid gap-4 lg:grid-cols-2">
           {/* Content */}
           <div className="flex flex-col gap-3">
@@ -53,8 +54,9 @@ export default function HomePage() {
         </div>
 
         {/* Features bar */}
-        <div className="absolute bottom-5 md:bottom-8 left-1/2 -translate-x-1/2 w-full">
-          <div className="bg-neutral-800/25 backdrop-blur-2xl rounded-t-lg grid grid-cols-2 sm:grid-cols-4 divide-x divide-neutral-700 container">
+
+        <div className="absolute bottom-5 md:bottom-8 left-1/2 -translate-x-1/2 w-full container">
+          <div className="bg-neutral-800/25 backdrop-blur-2xl rounded-t-lg grid grid-cols-1 sm:grid-cols-4 sm:divide-x divide-neutral-700 container">
             {features.map(({ icon: Icon, label }) => (
               <div key={label} className="flex items-center gap-3 px-5 py-4">
                 <Icon className="size-10 text-neutral-300 shrink-0" />

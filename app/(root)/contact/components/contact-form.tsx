@@ -31,8 +31,16 @@ export default function ContactForm() {
   return (
     <div className="py-14">
       <div className="container grid grid-cols-1 md:grid-cols-2 gap-10">
-        {/* Left — map placeholder */}
-        <div className="bg-gray-200 rounded-sm min-h-[420px] w-full" />
+        {/* Left — Google Map */}
+        <div className="w-full h-105 overflow-hidden rounded-sm">
+          <iframe
+            src="https://www.google.com/maps?q=123+Maple+Street,+Toronto,+Ontario,+Canada&output=embed"
+            className="w-full h-full border-0"
+            loading="lazy"
+            allowFullScreen
+            referrerPolicy="no-referrer-when-downgrade"
+          />
+        </div>
 
         {/* Right — form */}
         <div className="flex flex-col gap-5">
