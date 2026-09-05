@@ -13,5 +13,5 @@ h6 {
   @apply font-raleway;
 }
 .container {
-  @apply px-4 mx-auto max-w-[1280px] w-full;
+  @apply px-4 sm:px-8 mx-auto max-w-[1280px] w-full;
 }
