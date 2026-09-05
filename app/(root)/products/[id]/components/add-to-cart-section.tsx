@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { Product } from "@/lib/types";
+import { Product } from "@/types";
 import { useCartStore } from "@/store/cart-store";
 import toast from "react-hot-toast";
 

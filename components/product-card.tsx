@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { Product } from "@/lib/types";
+import { Product } from "@/types";
 import AddToCartButton from "./add-to-cart-button";
 
 interface Props {

@@ -3,7 +3,7 @@
 import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { Product } from "@/lib/types";
+import { Product } from "@/types";
 import { useCartStore } from "@/store/cart-store";
 import toast from "react-hot-toast";
 
