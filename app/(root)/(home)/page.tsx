@@ -29,7 +29,7 @@ export default function HomePage() {
           {/* Content */}
           <div className="flex flex-col gap-3">
             <p className="text-neutral-400">From $999</p>
-            <h1 className="text-white text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight">
+            <h1 className="text-white text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight text-pretty max-w-xl md:max-w-none">
               Power up your tech.Upgrade your life.
             </h1>
             <Link
